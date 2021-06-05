@@ -1,0 +1,15 @@
+{
+    "name": "glenn/flight-system",
+    "description": "Object Oriented Programming Session One",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Glenn Rudge",
+            "email": "glenn@rudgeholdings.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"FlightSystem\\": "src/"}
+    }
+}
