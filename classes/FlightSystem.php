@@ -1,38 +1,13 @@
 <?php
 declare(strict_types = 1);
-
-// TODO: Make a class for manufacturer.
-
-require __DIR__ . "../vendor/autoload.php";
-
-
-class Manufacturer
-{
-    public ?DateTime $founded;
-    public string $headquarters;
-    public string $areaServed;
-    public array $keyPeople;
-    public array $products;
-    public int $equity;
-
-    public function __construct(?DateTime $founded, string $headquarters, string $areaServed, array $keyPeople, array $products, int $equity)
-    {
-        $this->founded = $founded;
-        $this->headquarters = $headquarters;
-        $this->areaServed = $areaServed;
-        $this->keyPeople = $keyPeople;
-        $this->products = $products;
-        $this->equity = $equity;
-    }
-
-}
+include_once "./Manufacturer.php";
 
 class Plane extends Manufacturer
 {
-    public $role = null;
-    public $nationalOrigin = null;
-    public $manufacturer = null;
-    public $numberBuilt = null;
+    public ?string $role = null;
+    public ?string $nationalOrigin = null;
+    public ?Manufacturer $manufacturer = null;
+    public ?int $numberBuilt = null;
 
     public function __construct(Manufacturer $manufacturer, string $role, string $nationalOrigin, int $numberBuilt)
     {
